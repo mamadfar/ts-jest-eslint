@@ -7,6 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
+    "test:ci": "jest --coverage --silent --ci",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
