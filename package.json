@@ -6,7 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "global": "^4.4.0",
@@ -29,8 +31,15 @@
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-testing-library": "^5.0.1",
+    "husky": "^7.0.4",
     "jest": "^27.4.3",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
     "ts-jest": "^27.1.1",
     "typescript": "^4.5.2"
+  },
+  "lint-staged": {
+    "*.(tsx|ts)": "eslint --cache --fix",
+    "*": "prettier --write --ignore-unknown"
   }
 }
